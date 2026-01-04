@@ -1,0 +1,17 @@
+
+:root { --overlay: rgba(0,0,0,0.45); --accent: #2e7d32; --text: #fff; }
+
+.hero {
+  min-height: calc(100vh - 64px); /* account for header height */
+  display: grid;
+  place-items: center;
+  text-align: center;
+  color: var(--text);
+  background: linear-gradient(var(--overlay), var(--overlay)),
+    url('https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat fixed;
+}
+.hero__content { padding: 2rem; }
+.hero__title { font-size: clamp(2.2rem, 4vw, 4rem); margin: 0 0 0.5rem; letter-spacing: 0.02em; }
+.hero__subtitle { font-size: clamp(1rem, 2vw, 1.25rem); opacity: 0.95; margin-bottom: 1.5rem; }
+.hero__cta { background: var(--accent); color: #fff; padding: 0.9rem 1.4rem; border-radius: 8px; text-decoration: none; font-weight: 600; transition: filter .2s ease; }
+.hero__cta:hover { filter: brightness(1.05); }
